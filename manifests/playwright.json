@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+  "name": "playwright",
+  "description": "Browser automation and testing via Playwright",
+  "version": "1.0.0",
+  "vendor": "Microsoft",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/microsoft/playwright-mcp",
+  "installation": {
+    "npm": {
+      "package": "playwright-mcp",
+      "command": "npx",
+      "args": ["-y", "playwright-mcp"]
+    }
+  },
+  "configuration": {
+    "required_env_vars": [],
+    "optional_env_vars": ["PLAYWRIGHT_BROWSER"]
+  },
+  "tools": [
+    {
+      "name": "navigate",
+      "description": "Navigate to a URL"
+    },
+    {
+      "name": "screenshot",
+      "description": "Take a screenshot of the current page"
+    },
+    {
+      "name": "click",
+      "description": "Click an element on the page"
+    }
+  ],
+  "categories": ["testing", "automation", "qa"]
+}

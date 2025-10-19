@@ -1,0 +1,40 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-16/server.schema.json",
+  "name": "github",
+  "description": "GitHub MCP server for repository operations",
+  "version": "1.0.0",
+  "vendor": "GitHub",
+  "license": "MIT",
+  "homepage": "https://github.com/github/github-mcp-server",
+  "installation": {
+    "npm": {
+      "package": "@modelcontextprotocol/server-github",
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"]
+    },
+    "docker": {
+      "image": "ghcr.io/github/github-mcp-server:latest",
+      "command": "docker",
+      "args": ["run", "-i", "--rm", "ghcr.io/github/github-mcp-server:latest"]
+    }
+  },
+  "configuration": {
+    "required_env_vars": ["GITHUB_TOKEN"],
+    "optional_env_vars": ["GITHUB_ENTERPRISE_URL"]
+  },
+  "tools": [
+    {
+      "name": "search_repositories",
+      "description": "Search GitHub repositories"
+    },
+    {
+      "name": "create_issue",
+      "description": "Create a new GitHub issue"
+    },
+    {
+      "name": "list_pull_requests",
+      "description": "List pull requests for a repository"
+    }
+  ],
+  "categories": ["code", "devops", "github"]
+}
