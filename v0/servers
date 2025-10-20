@@ -1,0 +1,26 @@
+{
+    "servers": [
+        {
+            "id": "github",
+            "name": "GitHub MCP Server",
+            "description": "Official GitHub MCP server for repo, issue, and PR management",
+            "manifest_url": "https://raw.githubusercontent.com/grant-singleton-nz/mcp-registry/main/manifests/github.json",
+            "categories": ["code", "devops", "github"],
+            "version": "1.0.0",
+            "release_date": "2025-10-15T00:00:00Z",
+            "latest": true
+        },
+        {
+            "id": "playwright",
+            "name": "Playwright MCP Server",
+            "description": "Browser automation and testing tools",
+            "manifest_url": "https://raw.githubusercontent.com/grant-singleton-nz/mcp-registry/main/manifests/playwright.json",
+            "categories": ["testing", "automation"],
+            "version": "1.0.0",
+            "release_date": "2025-10-15T00:00:00Z",
+            "latest": true
+        }
+    ],
+    "total_count": 2,
+    "updated_at": "2025-10-15T12:00:00Z"
+}
