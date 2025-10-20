@@ -19,8 +19,18 @@
             "version": "1.0.0",
             "release_date": "2024-01-15T00:00:00Z",
             "latest": true
+        },
+        {
+            "id": "test-custom-server",
+            "name": "TEST Custom MCP Server - Grant's Registry",
+            "description": "A test server to verify custom registry is being used instead of official repo",
+            "manifest_url": "https://raw.githubusercontent.com/grant-singleton-nz/mcp-registry/main/manifests/test-custom.json",
+            "categories": ["testing", "custom"],
+            "version": "1.0.0",
+            "release_date": "2024-01-15T00:00:00Z",
+            "latest": true
         }
     ],
-    "total_count": 2,
+    "total_count": 3,
     "updated_at": "2024-01-15T12:00:00Z"
 }
