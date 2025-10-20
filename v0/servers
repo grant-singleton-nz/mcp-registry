@@ -1,36 +1,155 @@
 {
-    "servers": [
-        {
-            "id": "github",
-            "name": "GitHub MCP Server",
-            "description": "Official GitHub MCP server for repo, issue, and PR management",
-            "manifest_url": "https://raw.githubusercontent.com/grant-singleton-nz/mcp-registry/main/manifests/github.json",
-            "categories": ["code", "devops", "github"],
-            "version": "1.0.0",
-            "release_date": "2024-01-15T00:00:00Z",
-            "latest": true
+  "servers": [
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+        "name": "io.github.modelcontextprotocol/github",
+        "description": "GitHub MCP server for repository operations",
+        "version": "1.0.0",
+        "repository": {
+          "url": "https://github.com/modelcontextprotocol/servers",
+          "source": "github"
         },
-        {
-            "id": "playwright",
-            "name": "Playwright MCP Server",
-            "description": "Browser automation and testing tools",
-            "manifest_url": "https://raw.githubusercontent.com/grant-singleton-nz/mcp-registry/main/manifests/playwright.json",
-            "categories": ["testing", "automation"],
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@modelcontextprotocol/server-github",
             "version": "1.0.0",
-            "release_date": "2024-01-15T00:00:00Z",
-            "latest": true
-        },
-        {
-            "id": "test-custom-server",
-            "name": "TEST Custom MCP Server - Grant's Registry",
-            "description": "A test server to verify custom registry is being used instead of official repo",
-            "manifest_url": "https://raw.githubusercontent.com/grant-singleton-nz/mcp-registry/main/manifests/test-custom.json",
-            "categories": ["testing", "custom"],
-            "version": "1.0.0",
-            "release_date": "2024-01-15T00:00:00Z",
-            "latest": true
+            "transport": {
+              "type": "stdio"
+            },
+            "runtimeHint": "npx",
+            "runtimeArguments": [
+              {
+                "type": "positional",
+                "value": "-y"
+              },
+              {
+                "type": "positional",
+                "value": "@modelcontextprotocol/server-github"
+              }
+            ],
+            "environmentVariables": [
+              {
+                "name": "GITHUB_TOKEN",
+                "description": "GitHub Personal Access Token for API authentication",
+                "isRequired": true,
+                "isSecret": true
+              },
+              {
+                "name": "GITHUB_ENTERPRISE_URL",
+                "description": "Optional GitHub Enterprise URL",
+                "isRequired": false
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2024-01-15T00:00:00Z",
+          "updatedAt": "2024-01-15T00:00:00Z",
+          "isLatest": true
         }
-    ],
-    "total_count": 3,
-    "updated_at": "2024-01-15T12:00:00Z"
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+        "name": "io.github.modelcontextprotocol/playwright",
+        "description": "Browser automation and testing tools using Playwright",
+        "version": "1.0.0",
+        "repository": {
+          "url": "https://github.com/modelcontextprotocol/servers",
+          "source": "github"
+        },
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@modelcontextprotocol/server-playwright",
+            "version": "1.0.0",
+            "transport": {
+              "type": "stdio"
+            },
+            "runtimeHint": "npx",
+            "runtimeArguments": [
+              {
+                "type": "positional",
+                "value": "-y"
+              },
+              {
+                "type": "positional",
+                "value": "@modelcontextprotocol/server-playwright"
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2024-01-15T00:00:00Z",
+          "updatedAt": "2024-01-15T00:00:00Z",
+          "isLatest": true
+        }
+      }
+    },
+    {
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+        "name": "io.github.grant-singleton/test-custom",
+        "description": "TEST CUSTOM SERVER - This server should only appear if your custom registry is working correctly",
+        "version": "1.0.0",
+        "repository": {
+          "url": "https://github.com/grant-singleton-nz/mcp-registry",
+          "source": "github"
+        },
+        "packages": [
+          {
+            "registryType": "npm",
+            "registryBaseUrl": "https://registry.npmjs.org",
+            "identifier": "@grant-singleton-nz/test-custom-mcp-server",
+            "version": "1.0.0",
+            "transport": {
+              "type": "stdio"
+            },
+            "runtimeHint": "npx",
+            "runtimeArguments": [
+              {
+                "type": "positional",
+                "value": "-y"
+              },
+              {
+                "type": "positional",
+                "value": "@grant-singleton-nz/test-custom-mcp-server"
+              }
+            ],
+            "environmentVariables": [
+              {
+                "name": "TEST_API_KEY",
+                "description": "Test API key for demonstration purposes",
+                "isRequired": false,
+                "isSecret": true
+              }
+            ]
+          }
+        ]
+      },
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "status": "active",
+          "publishedAt": "2024-01-15T00:00:00Z",
+          "updatedAt": "2024-01-15T00:00:00Z",
+          "isLatest": true
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "nextCursor": "",
+    "count": 3
+  }
 }
