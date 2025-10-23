@@ -4,7 +4,7 @@
             "id": "example-server",
             "name": "Example MCP Server",
             "description": "A simple example server for testing",
-            "manifest_url": "/manifests/example-server.json",
+            "manifest_url": "https://mcp-registry-beryl.vercel.app/manifests/example-server.json",
             "categories": ["example", "testing"],
             "version": "1.0.0",
             "release_date": "2025-01-15T00:00:00Z",

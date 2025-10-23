@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0.0",
+  "name": "example-server",
+  "version": "1.0.0",
+  "description": "A simple example server for testing the MCP registry",
+  "author": {
+    "name": "Example Author",
+    "email": "author@example.com"
+  },
+  "homepage": "https://github.com/example/example-server",
+  "license": "MIT",
+  "runtime": {
+    "type": "node",
+    "version": ">=18.0.0"
+  },
+  "installation": {
+    "npm": "example-mcp-server",
+    "command": "npx example-mcp-server"
+  },
+  "configuration": {
+    "env": {
+      "EXAMPLE_API_KEY": {
+        "description": "API key for the example service",
+        "required": false,
+        "default": ""
+      }
+    }
+  },
+  "capabilities": {
+    "tools": [
+      {
+        "name": "example-tool",
+        "description": "An example tool that does something useful"
+      }
+    ],
+    "resources": [
+      {
+        "name": "example-resource",
+        "description": "An example resource"
+      }
+    ],
+    "prompts": []
+  },
+  "tags": ["example", "testing", "demo"],
+  "categories": ["example", "testing"]
+}

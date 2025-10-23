@@ -10,7 +10,7 @@
             ]
         },
         {
-            "source": "/manifests/(.*).json",
+            "source": "/manifests/:path*",
             "headers": [
                 {
                     "key": "Content-Type",
@@ -22,7 +22,8 @@
     "rewrites": [
         {
             "source": "/v0.1/servers",
-            "destination": "servers.json"
+            "destination": "/servers.json"
         }
-    ]
+    ],
+    "cleanUrls": true
 }
