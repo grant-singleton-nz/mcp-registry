@@ -8,6 +8,15 @@
                     "value": "application/json"
                 }
             ]
+        },
+        {
+            "source": "/manifests/(.*).json",
+            "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
         }
     ],
     "rewrites": [
