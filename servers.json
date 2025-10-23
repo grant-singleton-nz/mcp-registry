@@ -1,16 +1,40 @@
 {
     "servers": [
         {
-            "id": "example-server",
-            "name": "Example MCP Server",
-            "description": "A simple example server for testing",
-            "manifest_url": "https://mcp-registry-beryl.vercel.app/manifests/example-server.json",
-            "categories": ["example", "testing"],
-            "version": "1.0.0",
-            "release_date": "2025-01-15T00:00:00Z",
-            "latest": true
+            "server": {
+                "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+                "name": "example-server",
+                "description": "A simple example server for testing",
+                "version": "1.0.0",
+                "title": "Example MCP Server",
+                "repository": {
+                    "url": "https://github.com/example/example-server",
+                    "source": "github",
+                    "id": "example/example-server"
+                },
+                "packages": [
+                    {
+                        "identifier": "example-mcp-server",
+                        "registry_type": "npm",
+                        "version": "1.0.0",
+                        "transport": {
+                            "type": "stdio"
+                        }
+                    }
+                ]
+            },
+            "_meta": {
+                "io.modelcontextprotocol.registry/official": {
+                    "id": "example-server",
+                    "status": "approved",
+                    "is_latest": true,
+                    "published_at": "2025-01-15T00:00:00Z",
+                    "updated_at": "2025-01-15T00:00:00Z"
+                }
+            }
         }
     ],
-    "total_count": 1,
-    "updated_at": "2025-01-15T12:00:00Z"
+    "metadata": {
+        "count": 1
+    }
 }
