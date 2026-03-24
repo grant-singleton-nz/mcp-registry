@@ -1,19 +1,17 @@
 {
   "server": {
-    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
-    "name": "example-server",
-    "version": "1.0.0",
-    "title": "Example MCP Server",
+    "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+    "name": "io.github.grant-singleton-nz/example-server",
     "description": "A simple example server for testing",
+    "version": "1.0.0",
     "repository": {
       "url": "https://github.com/example/example-server",
-      "source": "github",
-      "id": "example/example-server"
+      "source": "github"
     },
     "packages": [
       {
+        "registryType": "npm",
         "identifier": "example-mcp-server",
-        "registry_type": "npm",
         "version": "1.0.0",
         "transport": { "type": "stdio" }
       }

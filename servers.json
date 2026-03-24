@@ -1,24 +1,33 @@
 {
   "servers": [
     {
-      "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
-      "name": "example-server",
-      "description": "A simple example server for testing",
-      "version": "1.0.0",
-      "title": "Example MCP Server",
-      "repository": {
-        "url": "https://github.com/example/example-server",
-        "source": "github",
-        "id": "example/example-server"
+      "server": {
+        "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+        "name": "io.github.grant-singleton-nz/example-server",
+        "description": "A simple example server for testing",
+        "version": "1.0.0",
+        "repository": {
+          "url": "https://github.com/example/example-server",
+          "source": "github"
+        },
+        "packages": [
+          {
+            "registryType": "npm",
+            "identifier": "example-mcp-server",
+            "version": "1.0.0",
+            "transport": { "type": "stdio" }
+          }
+        ]
       },
-      "packages": [
-        {
-          "identifier": "example-mcp-server",
-          "registry_type": "npm",
-          "version": "1.0.0",
-          "transport": { "type": "stdio" }
+      "_meta": {
+        "io.modelcontextprotocol.registry/official": {
+          "id": "io.github.grant-singleton-nz/example-server",
+          "status": "active",
+          "is_latest": true,
+          "published_at": "2025-01-15T00:00:00Z",
+          "updated_at": "2025-01-15T00:00:00Z"
         }
-      ]
+      }
     }
   ],
   "metadata": {
