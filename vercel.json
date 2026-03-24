@@ -1,28 +1,24 @@
 {
-    "headers": [
-        {
-            "source": "/v0.1/servers",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                }
-            ]
-        },
-        {
-            "source": "/manifests/:path*",
-            "headers": [
-                {
-                    "key": "Content-Type",
-                    "value": "application/json"
-                }
-            ]
-        }
-    ],
-    "rewrites": [
-      { "source": "/v0.1/servers", "destination": "/servers.json" },
-      { "source": "/v0.1/servers/example-server/versions/latest", "destination": "/servers-example-server-latest.json" },
-      { "source": "/v0.1/servers/example-server/versions/1.0.0", "destination": "/servers-example-server-latest.json" }
-    ],
-    "cleanUrls": true
+  "rewrites": [
+    { "source": "/v0.1/servers", "destination": "/servers.json" },
+    { "source": "/v0.1/servers/example-server/versions/latest", "destination": "/servers-example-server-latest.json" },
+    { "source": "/v0.1/servers/example-server/versions/1.0.0", "destination": "/servers-example-server-latest.json" }
+  ],
+  "headers": [
+    {
+      "source": "/v0.1/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, OPTIONS" },
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    },
+    {
+      "source": "/manifests/:path*",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" }
+      ]
+    }
+  ],
+  "cleanUrls": true
 }
