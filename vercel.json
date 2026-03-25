@@ -3,6 +3,8 @@
     { "source": "/v0.1/servers", "destination": "/servers.json" },
     { "source": "/v0.1/servers/io.github.grant-singleton-nz%2Fexample-server/versions/latest", "destination": "/servers-example-server-latest.json" },
     { "source": "/v0.1/servers/io.github.grant-singleton-nz%2Fexample-server/versions/1.0.0", "destination": "/servers-example-server-latest.json" },
+    { "source": "/v0.1/servers/io.github.grant-singleton-nz/example-server/versions/latest", "destination": "/servers-example-server-latest.json" },
+    { "source": "/v0.1/servers/io.github.grant-singleton-nz/example-server/versions/1.0.0", "destination": "/servers-example-server-latest.json" },
     { "source": "/v0.1/servers/:name/versions/:version", "destination": "/servers-example-server-latest.json" }
   ],
   "headers": [
